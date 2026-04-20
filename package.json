@@ -1,0 +1,16 @@
+{
+  "name": "insight-ai-saas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "npx concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "build:client": "cd client && npm run build",
+    "deploy": "npm run build:client && npx firebase-tools deploy --only hosting"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "firebase-tools": "^13.35.1"
+  }
+}
